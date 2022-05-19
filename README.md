@@ -4,6 +4,7 @@ I use Arch Linux with BSPWM + Polybar
 
 If you want to get desktop look like mine you need to have:
 * bspwm
+* sxhkd
 * polybar
 * ttf-font-awesome
 * Alacritty
