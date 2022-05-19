@@ -1,0 +1,14 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-LL6VY0.desktop
+image/png=firefox.desktop
+application/pdf=firefox.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+text/html=firefox.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-LL6VY0.desktop;
+image/png=firefox.desktop;
+text/plain=firefox.desktop;
+image/jpeg=firefox.desktop;
+application/pdf=firefox.desktop;
+text/html=firefox.desktop;

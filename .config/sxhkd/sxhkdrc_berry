@@ -1,0 +1,135 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+# program launcher
+#super + @space
+super + d
+	rofi -show drun -show-icons
+# browser launch
+#super + f
+#	firefox
+
+#dmenu_run
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart berry
+super + alt + {q,r}
+	berryc {quit,wm -r}
+
+# close and kill
+super + w
+	berryc window_close
+
+#
+# berry hotkeys
+#
+
+super + {h, j, k, l}
+    berryc window_move {-10 0, 0 10, 0 -10, 10 0}
+
+super + shift +  {h, j, k, l}
+    berryc window_resize {-10 0, 0 10, 0 -10, 10 0}
+
+super + {1-9}
+    berryc switch_workspace {0-9}
+
+super + shift + {0-9}
+    berryc send_to_workspace {0-9}
+
+super + m
+    berryc window_monocle
+
+super + f
+    berryc fullscreen
+
+super +  p
+    berryc snap_right
+
+super + o 
+    berryc snap_left
+
+super + n
+    berryc toggle_decorations
+
+super + Tab
+    berryc cycle_focus
+
+super + q
+    berryc window_close
+
+super + c
+    berryc window_center
+
+~button1
+    berryc pointer_focus
+
+
+#
+# Apps shortcuts
+#
+
+# Firefox
+#super + KP_End
+#	firefox
+super + Prior
+	firefox
+
+
+# PcManFM
+super + Next
+	pcmanfm 
+
+# ncmpcpp
+super + KP_Begin
+	alacritty -e ncmpcpp 
+
+# sxhkd config
+super + Home
+	alacritty -e vim ~/.config/sxhkd/sxhkdrc
+# bspwm config
+super + End 
+	alacritty -e vim ~/.config/bspwm/bspwmrc
+
+# Shutdown
+super + Delete 
+	poweroff
+
+#
+# Mediakeys
+#
+
+#ctrl + XF86AudioRaiseVolume
+#	amixer -D pulse sset Master 5%+
+
+#XF86AudioRaiseVolume
+#	amixer set Master 5%+
+
+#ctrl + XF86AudioLowerVolume
+#	amixer -D pulse sset Master 5%-
+
+#XF86AudioLowerVolume
+#	amixer set Master 5%-
+
+#ctrl + XF86AudioMute
+#	amixer -D pulse sset Master toggle -q
+#XF86AudioMute
+#	amixer set Master toggle -q
+
+
+XF86MonBrightness{Down,Up}
+    xbacklight {-dec 15,-inc 15}
+
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+    amixer set Master {toggle -q,5%-,5%+}
